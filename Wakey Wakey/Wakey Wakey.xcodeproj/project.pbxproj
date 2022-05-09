@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C6CE1E02829ABB800F97D93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8C6CE1DF2829ABB800F97D93 /* Alamofire */; };
 		8C8B17D628298EC1009AFADE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17D528298EC1009AFADE /* AppDelegate.swift */; };
 		8C8B17D828298EC1009AFADE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17D728298EC1009AFADE /* SceneDelegate.swift */; };
 		8C8B17DA28298EC1009AFADE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17D928298EC1009AFADE /* ViewController.swift */; };
@@ -16,6 +17,10 @@
 		8C8B17ED28298EC3009AFADE /* Wakey_WakeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17EC28298EC3009AFADE /* Wakey_WakeyTests.swift */; };
 		8C8B17F728298EC3009AFADE /* Wakey_WakeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17F628298EC3009AFADE /* Wakey_WakeyUITests.swift */; };
 		8C8B17F928298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17F828298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift */; };
+		8C8C39962829B7D300DC21FF /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C39952829B7D300DC21FF /* SearchListInteractor.swift */; };
+		8C8C39982829B8D700DC21FF /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C39972829B8D700DC21FF /* Domain.swift */; };
+		8C8C399B2829B93200DC21FF /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C399A2829B93200DC21FF /* SearchListPresenter.swift */; };
+		8C8C399D2829BAB300DC21FF /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C399C2829BAB300DC21FF /* SearchListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		8C8B17F228298EC3009AFADE /* Wakey WakeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wakey WakeyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C8B17F628298EC3009AFADE /* Wakey_WakeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wakey_WakeyUITests.swift; sourceTree = "<group>"; };
 		8C8B17F828298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wakey_WakeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8C8C39952829B7D300DC21FF /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
+		8C8C39972829B8D700DC21FF /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		8C8C399A2829B93200DC21FF /* SearchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
+		8C8C399C2829BAB300DC21FF /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6CE1E02829ABB800F97D93 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,8 @@
 		8C8B17D428298EC1009AFADE /* Wakey Wakey */ = {
 			isa = PBXGroup;
 			children = (
+				8C8C39992829B91B00DC21FF /* SearchList */,
+				8C8C39942829B7BD00DC21FF /* Core */,
 				8C8B17E328298EC3009AFADE /* Info.plist */,
 				8C8B1806282990AE009AFADE /* Resources */,
 				8C8B1805282990A0009AFADE /* App */,
@@ -143,6 +155,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8C8C39942829B7BD00DC21FF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8C8C39972829B8D700DC21FF /* Domain.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		8C8C39992829B91B00DC21FF /* SearchList */ = {
+			isa = PBXGroup;
+			children = (
+				8C8C399C2829BAB300DC21FF /* SearchListView.swift */,
+				8C8C39952829B7D300DC21FF /* SearchListInteractor.swift */,
+				8C8C399A2829B93200DC21FF /* SearchListPresenter.swift */,
+			);
+			path = SearchList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,6 +189,9 @@
 			dependencies = (
 			);
 			name = "Wakey Wakey";
+			packageProductDependencies = (
+				8C6CE1DF2829ABB800F97D93 /* Alamofire */,
+			);
 			productName = "Wakey Wakey";
 			productReference = 8C8B17D228298EC1009AFADE /* Wakey Wakey.app */;
 			productType = "com.apple.product-type.application";
@@ -231,6 +264,9 @@
 				Base,
 			);
 			mainGroup = 8C8B17C928298EC1009AFADE;
+			packageReferences = (
+				8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8C8B17D328298EC1009AFADE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -275,7 +311,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8B17DA28298EC1009AFADE /* ViewController.swift in Sources */,
+				8C8C39982829B8D700DC21FF /* Domain.swift in Sources */,
+				8C8C399B2829B93200DC21FF /* SearchListPresenter.swift in Sources */,
 				8C8B17D628298EC1009AFADE /* AppDelegate.swift in Sources */,
+				8C8C39962829B7D300DC21FF /* SearchListInteractor.swift in Sources */,
+				8C8C399D2829BAB300DC21FF /* SearchListView.swift in Sources */,
 				8C8B17D828298EC1009AFADE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +658,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8C6CE1DF2829ABB800F97D93 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8C8B17CA28298EC1009AFADE /* Project object */;
 }
