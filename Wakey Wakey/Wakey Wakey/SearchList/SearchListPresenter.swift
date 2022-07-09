@@ -8,7 +8,7 @@
 class SearchListPresenter {
     private let view: SearchListView
     private let interactor: SearchListInteractor
-    
+
     public init(
         view: SearchListView,
         interactor: SearchListInteractor
@@ -16,10 +16,10 @@ class SearchListPresenter {
         self.view = view
         self.interactor = interactor
     }
-    
+
     public func search(query: String) {
-        self.interactor.search(query: query, completion: { reponse in
-            self.view.show(decodable: reponse)
+        self.interactor.search(query: query, completion: { response in
+            self.view.show(result: response)
         })
     }
 }

@@ -6,5 +6,5 @@
 //
 
 protocol SearchListView {
-    func show(decodable: DecodableType)
+    func show(result: VideoSearchResult)
 }

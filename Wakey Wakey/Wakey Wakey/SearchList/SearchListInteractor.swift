@@ -19,9 +19,12 @@ struct SearchListInteractor {
         "Authorization": Config.apiKey
     ]
     
-    func search(query: String, completion: @escaping (DecodableType) -> Void) {
+    func search(query: String, completion: @escaping (VideoSearchResult) -> Void) {
         AF.request("\(Config.baseUrl)?query=\(query)", method: .get, headers: self.headers)
-            .responseDecodable(of: DecodableType.self) { response in
+            .responseDecodable(of: VideoSearchResult.self) { response in
+                if let err = response.error {
+                    print("err: \(err)")
+                }
                 guard let res = response.value else { return }
                 completion(res)
             }

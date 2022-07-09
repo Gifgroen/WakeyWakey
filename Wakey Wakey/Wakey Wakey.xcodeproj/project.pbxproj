@@ -18,9 +18,11 @@
 		8C8B17F728298EC3009AFADE /* Wakey_WakeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17F628298EC3009AFADE /* Wakey_WakeyUITests.swift */; };
 		8C8B17F928298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8B17F828298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift */; };
 		8C8C39962829B7D300DC21FF /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C39952829B7D300DC21FF /* SearchListInteractor.swift */; };
-		8C8C39982829B8D700DC21FF /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C39972829B8D700DC21FF /* Domain.swift */; };
 		8C8C399B2829B93200DC21FF /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C399A2829B93200DC21FF /* SearchListPresenter.swift */; };
 		8C8C399D2829BAB300DC21FF /* SearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8C399C2829BAB300DC21FF /* SearchListView.swift */; };
+		D984F34069AC0A7D1940ACCD /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989403D85B2227991D73831 /* Video.swift */; };
+		D98A3B84AD72D438424C41E0 /* VideoSearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98D854AEA8CA87494D35E0A /* VideoSearchResult.swift */; };
+		D98E0560F2961A5465CEE034 /* ResultStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98F1A113F3B50A91C6C36DC /* ResultStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +57,11 @@
 		8C8B17F628298EC3009AFADE /* Wakey_WakeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wakey_WakeyUITests.swift; sourceTree = "<group>"; };
 		8C8B17F828298EC3009AFADE /* Wakey_WakeyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wakey_WakeyUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8C8C39952829B7D300DC21FF /* SearchListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
-		8C8C39972829B8D700DC21FF /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
 		8C8C399A2829B93200DC21FF /* SearchListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
 		8C8C399C2829BAB300DC21FF /* SearchListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchListView.swift; sourceTree = "<group>"; };
+		D989403D85B2227991D73831 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		D98D854AEA8CA87494D35E0A /* VideoSearchResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoSearchResult.swift; sourceTree = "<group>"; };
+		D98F1A113F3B50A91C6C36DC /* ResultStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +162,9 @@
 		8C8C39942829B7BD00DC21FF /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				8C8C39972829B8D700DC21FF /* Domain.swift */,
+				D98D854AEA8CA87494D35E0A /* VideoSearchResult.swift */,
+				D98F1A113F3B50A91C6C36DC /* ResultStorage.swift */,
+				D989403D85B2227991D73831 /* Video.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -265,7 +271,7 @@
 			);
 			mainGroup = 8C8B17C928298EC1009AFADE;
 			packageReferences = (
-				8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire.git" */,
 			);
 			productRefGroup = 8C8B17D328298EC1009AFADE /* Products */;
 			projectDirPath = "";
@@ -311,12 +317,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C8B17DA28298EC1009AFADE /* ViewController.swift in Sources */,
-				8C8C39982829B8D700DC21FF /* Domain.swift in Sources */,
 				8C8C399B2829B93200DC21FF /* SearchListPresenter.swift in Sources */,
 				8C8B17D628298EC1009AFADE /* AppDelegate.swift in Sources */,
 				8C8C39962829B7D300DC21FF /* SearchListInteractor.swift in Sources */,
 				8C8C399D2829BAB300DC21FF /* SearchListView.swift in Sources */,
 				8C8B17D828298EC1009AFADE /* SceneDelegate.swift in Sources */,
+				D98A3B84AD72D438424C41E0 /* VideoSearchResult.swift in Sources */,
+				D98E0560F2961A5465CEE034 /* ResultStorage.swift in Sources */,
+				D984F34069AC0A7D1940ACCD /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +509,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,6 +538,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -660,7 +670,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -673,7 +683,7 @@
 /* Begin XCSwiftPackageProductDependency section */
 		8C6CE1DF2829ABB800F97D93 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = 8C6CE1DE2829ABB800F97D93 /* XCRemoteSwiftPackageReference "Alamofire.git" */;
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
